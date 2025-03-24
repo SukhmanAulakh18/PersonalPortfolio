@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node",
+        "config": {
+          "installCommand": "npm install",
+          "buildCommand": "CI=false npm run build",
+          "outputDirectory": "build"
+        }
+      }
+    ],
+    "routes": [
+      { 
+        "src": "/(.*)", 
+        "dest": "/index.html" 
+      }
+    ],
+    "github": {
+      "silent": true
+    }
+  }
