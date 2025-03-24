@@ -1,0 +1,381 @@
+// Keep your existing desktop styles
+.nav-bar {
+  background: #181818;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
+
+  .logo {
+    display: block;
+    padding: 8px 0;
+
+    img {
+      display: block;
+      margin: 8px auto;
+      width: 24px;
+      height: auto;
+
+      &.sub-logo {
+        width: 50px;
+      }
+    }
+  }
+
+  nav {
+    display: block;
+    text-align: center;
+    position: absolute;
+    height: 210px;
+    top: 50%;
+    margin-top: -120px;
+    width: 100%;
+
+    a {
+      font-size: 22px;
+      color: #4d4d4e;
+      display: block;
+      line-height: 51px;
+      height: 51px;
+      position: relative;
+      text-decoration: none;
+
+      i {
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover {
+        color: #ffd700;
+
+        svg {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &:after {
+        content: '';
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+
+      &:first-child {
+        &:after {
+          content: 'HOME';
+        }
+      }
+    }
+
+    a.about-link {
+      &:after {
+        content: 'ABOUT';
+      }
+    }
+
+    a.contact-link {
+      &:after {
+        content: 'CONTACT';
+      }
+    }
+
+    a.skills-link {
+      &:after {
+        content: 'SKILLS';
+      }
+    }
+
+    a.active {
+      svg {
+        color: #ffd700;
+      }
+    }
+
+    a.projects-link {
+      &:after {
+        content: 'PROJECTS';
+      }
+    }
+  }
+
+  ul.social-icons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+
+    li {
+      a {
+        padding: 7px 0;
+        display: block;
+        font-size: 15px;
+        line-height: 16px;
+        color: #4d4d4e;
+
+        &:hover {
+          color: #ffd700;
+        }
+      }
+    }
+  }
+  
+  // Hide mobile elements by default
+  .link-text,
+  .hamburger-menu,
+  .mobile-social {
+    display: none;
+  }
+}
+
+// IMPROVED RESPONSIVE STYLES
+@media screen and (max-width: 1200px) {
+  .nav-bar {
+    position: fixed;
+    background: #181818;
+    height: 60px;
+    width: 100%;
+    min-height: auto;
+    top: 0;
+    z-index: 20;
+    
+    .logo {
+      margin-top: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 15px;
+      
+      img {
+        margin: 0 5px 0 0;
+        height: 30px;
+        
+        &.sub-logo {
+          width: auto;
+          max-height: 25px;
+        }
+      }
+    }
+    
+    // Hide the Outlook image in mobile view
+    .desktop-only-icon {
+      display: none;
+    }
+    
+    // Hamburger Menu Styling
+    .hamburger-menu {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 100;
+      
+      .line {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffd700;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+        
+        &.line1 {
+          top: 0;
+        }
+        
+        &.line2 {
+          top: 11px;
+        }
+        
+        &.line3 {
+          top: 22px;
+        }
+      }
+      
+      // Animated hamburger to X
+      &.open {
+        .line1 {
+          transform: rotate(45deg);
+          top: 11px;
+        }
+        
+        .line2 {
+          opacity: 0;
+        }
+        
+        .line3 {
+          transform: rotate(-45deg);
+          top: 11px;
+        }
+      }
+    }
+    
+    nav {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(24, 24, 24, 0.9);
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 15;
+      transform: translateY(-100%);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      
+      &.mobile-show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        font-size: 22px;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        position: relative;
+        
+        .link-text {
+          display: block;
+          padding-top: 5px;
+          font-size: 14px;
+          letter-spacing: 1px;
+          color: #8d8d8d;
+        }
+        
+        &:hover {
+          color: #ffd700;
+          
+          svg {
+            opacity: 1;
+            color: #ffd700;
+          }
+          
+          .link-text {
+            color: #ffd700;
+          }
+        }
+        
+        &:after {
+          display: none;
+        }
+      }
+      
+      // Add mobile social icons styles
+      .mobile-social {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 30px 0 0;
+        gap: 25px;
+        
+        li {
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            height: auto;
+            width: auto;
+            
+            svg {
+              color: #b9b9b9;
+              font-size: 22px;
+              opacity: 1;
+              margin-bottom: 5px;
+              transition: all 0.3s ease;
+            }
+            
+            span {
+              color: #8d8d8d;
+              font-size: 12px;
+              letter-spacing: 1px;
+              line-height: 1;
+              transition: all 0.3s ease;
+            }
+            
+            &:hover {
+              svg {
+                color: #ffd700;
+                transform: translateY(-2px);
+              }
+              
+              span {
+                color: #ffd700;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Hide desktop social icons on mobile/tablet
+    .social-icons {
+      display: none;
+    }
+  }
+}
+
+// Small mobile adjustments
+@media screen and (max-width: 480px) {
+  .nav-bar {
+    nav {
+      a {
+        padding: 10px;
+        font-size: 18px;
+        
+        .link-text {
+          font-size: 12px;
+        }
+      }
+      
+      // Smaller spacing for mobile social icons on small devices
+      .mobile-social {
+        margin-top: 20px;
+        gap: 15px;
+        
+        li a {
+          padding: 8px;
+          
+          svg {
+            font-size: 20px;
+          }
+          
+          span {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

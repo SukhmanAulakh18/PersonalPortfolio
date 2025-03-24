@@ -1,0 +1,140 @@
+// Keep your existing tagcloud-wrap styles
+.tagcloud-wrap {
+  float: right;
+  width: 53%;
+  height: 115%;
+  margin-top: -3%;
+
+  .tagcloud {
+    color: #ff4500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 650;
+    margin: 10% auto;
+  }
+  .tagcloud--item:hover {
+    color: #00ff7f;
+  }
+  
+  &.hidden {
+    display: none;
+  }
+}
+
+// Add mobile skills list styling
+.skills-list {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  
+  .skill-category {
+    margin-bottom: 25px;
+    
+    h3 {
+      color: #ff4500;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 20px;
+      font-family: 'Coolvetica', sans-serif;
+      letter-spacing: 1px;
+      
+      &:before {
+        content: '>';
+        position: absolute;
+        left: 0;
+        color: #ff4500;
+      }
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      
+      li {
+        background: rgba(255, 69, 0, 0.1);
+        border: 1px solid rgba(255, 69, 0, 0.3);
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+        display: inline-block;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: rgba(255, 69, 0, 0.2);
+          border-color: #ff4500;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+// Update your responsive styles for better mobile layout
+@media screen and (max-width: 1200px) {
+  .skills-page {
+    .text-zone {
+      position: static !important;
+      transform: none !important;
+      width: 100% !important;
+      padding: 20px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+    }
+  
+    .tagcloud-wrap {
+      display: none; // Completely hide on mobile
+    }
+  }
+  
+  .skills-list {
+    .skill-category {
+      h3 {
+        font-size: 18px;
+      }
+      
+      ul {
+        li {
+          padding: 5px 12px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skills-list {
+    .skill-category {
+      h3 {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-list {
+    .skill-category {
+      margin-bottom: 20px;
+      
+      h3 {
+        font-size: 16px;
+      }
+      
+      ul {
+        gap: 8px;
+        
+        li {
+          padding: 4px 10px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

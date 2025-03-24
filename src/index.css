@@ -1,0 +1,33 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #252525;
+}
+
+/* Keep no-scroll for desktop */
+@media screen and (min-width: 1201px) {
+  body {
+    height: 100vh;
+    overflow: hidden; /* Keep hidden for desktop as you prefer */
+  }
+  
+  html {
+    overflow: hidden; /* Also hide on html for desktop */
+  }
+}
+
+/* Enable scrolling only for mobile/tablet */
+@media screen and (max-width: 1200px) {
+  html, body {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain; /* Prevent bounce/overscroll */
+  }
+}

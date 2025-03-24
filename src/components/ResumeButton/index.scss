@@ -1,0 +1,104 @@
+.resume-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    
+    a {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #63e6a8;
+      border-radius: 25px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 10px #63e6a8, 0 0 20px rgba(99, 230, 168, 0.3);
+      animation: pulse 2s infinite alternate;
+      
+      svg {
+        height: 20px;
+        width: 20px;
+        color: #63e6a8;
+      }
+      
+      span {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline; // Always visible now
+      }
+      
+      &:hover {
+        background: rgba(0, 0, 0, 0.9);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 0 15px #63e6a8, 0 0 30px rgba(99, 230, 168, 0.5);
+        
+        svg {
+          color: #ffffff;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px #63e6a8, 0 0 20px rgba(99, 230, 168, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 15px #63e6a8, 0 0 30px rgba(99, 230, 168, 0.6);
+    }
+  }
+  
+ // Your existing media query is good, but let's enhance it a bit:
+
+@media screen and (max-width: 768px) {
+    .resume-button {
+      top: 10px;
+      right: 10px;
+      
+      a {
+        padding: 8px 12px;
+        
+        svg {
+          height: 18px;
+          width: 18px;
+        }
+        
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  /* Add these additional breakpoints */
+  @media screen and (max-width: 480px) {
+    .resume-button {
+      top: 10px;
+      right: 60px; /* Make space for hamburger menu */
+      
+      a {
+        padding: 6px 10px;
+        
+        svg {
+          height: 16px;
+          width: 16px;
+        }
+        
+        span {
+          display: none; /* Hide text on smallest screens */
+        }
+        
+        &:hover {
+          span {
+            display: inline; /* Show on hover */
+          }
+        }
+      }
+    }
+  }

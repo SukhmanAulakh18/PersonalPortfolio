@@ -1,0 +1,84 @@
+.logo-container {
+  z-index: 0;
+  width: 400px;
+  height: 609px;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+  animation: zoomInDown 2.5s ease-in-out 1s;
+  user-select: none;
+
+  svg {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    transform: rotateZ(30deg) !important;
+  }
+
+  .solid-logo {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    opacity: 1;
+    transform: rotateZ(30deg) !important;
+    z-index: 1;
+  }
+}
+
+.svg-container {
+  stroke: #ffd700;
+  stroke-width: 10;
+}
+
+// Add these responsive styles at the end of your Logo scss file
+
+@media screen and (max-width: 1200px) {
+  .logo-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    
+    svg {
+      position: relative;
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+      transform: none !important;
+      display: block;
+      margin: 50px auto 0;
+    }
+    
+    .solid-logo {
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 400px;
+      transform: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-container {
+    svg, .solid-logo {
+      max-width: 280px;
+    }
+  }
+}

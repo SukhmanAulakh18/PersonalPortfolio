@@ -1,0 +1,65 @@
+.footer {
+  display: none; // Hidden by default on desktop
+  
+  @media screen and (max-width: 1200px) {
+    display: block;
+    background: #181818;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto; // Push to bottom of flex container
+    border-top: 1px solid #2d2d2d;
+    position: relative; // Not fixed - should be part of normal flow
+    bottom: 0;
+    left: 0;
+    
+    // Rest of your existing footer styling...
+    .content {
+      max-width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .copyright {
+      margin-bottom: 15px;
+      
+      p {
+        color: #8d8d8d;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+    }
+    
+    .footer-social {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      li {
+        margin: 0 15px;
+        
+        a {
+          color: #b9b9b9;
+          font-size: 18px;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          svg {
+            height: 18px;
+            width: auto;
+          }
+          
+          &:hover {
+            color: #ffd700;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
