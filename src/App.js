@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
 
-import About from './components/About'
-import Contact from './components/Contact'
+// Local component imports should typically come after router imports
 import Home from './components/Home'
 import Layout from './components/Layout'
+import About from './components/About'
+import Contact from './components/Contact'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import ResumeButton from './components/ResumeButton'
+
 import './App.scss'
 
 function App() {
