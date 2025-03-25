@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // Local component imports should typically come after router imports
 import Home from './components/Home'
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <ResumeButton />
-      <Routes>
+    <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
@@ -24,6 +24,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
         </Route>
       </Routes>
+      
     </>
   )
 }
