@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/PersonalPortfolio/static/css/main.4104c666.css",
+    "main.js": "/PersonalPortfolio/static/js/main.f1d72102.js",
+    "static/js/488.15c117bb.chunk.js": "/PersonalPortfolio/static/js/488.15c117bb.chunk.js",
+    "static/media/Video-calling.png": "/PersonalPortfolio/static/media/Video-calling.a3bf53683cd375b40fdc.png",
+    "static/media/RecipeFinder.png": "/PersonalPortfolio/static/media/RecipeFinder.585c828a788526b51d62.png",
+    "static/media/SpotifyClone.png": "/PersonalPortfolio/static/media/SpotifyClone.fe16ebc80d8c27c2ada2.png",
+    "static/media/UserManage.png": "/PersonalPortfolio/static/media/UserManage.d56fe020ab2884a8cedd.png",
+    "static/media/Covid19.png": "/PersonalPortfolio/static/media/Covid19.d9ab88a3aebe1c46e23a.png",
+    "static/media/sukhman-logo.png": "/PersonalPortfolio/static/media/sukhman-logo.af9b5a8e7f287b58220e.png",
+    "static/media/Resume.pdf": "/PersonalPortfolio/static/media/Resume.af11153ac5fb83668219.pdf",
+    "static/media/helvetica-neu.ttf": "/PersonalPortfolio/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "static/media/LaBelleAurore.woff": "/PersonalPortfolio/static/media/LaBelleAurore.9c5433c64baa43d1d274.woff",
+    "static/media/LaBelleAurore.woff2": "/PersonalPortfolio/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
+    "static/media/logo-s.png": "/PersonalPortfolio/static/media/logo-s.ff409c7cee45c0b5ceed.png",
+    "static/media/CoolveticaRg-Regular.woff": "/PersonalPortfolio/static/media/CoolveticaRg-Regular.8307bfa187bccdc55f4d.woff",
+    "static/media/CoolveticaRg-Regular.woff2": "/PersonalPortfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
+    "index.html": "/PersonalPortfolio/index.html",
+    "main.4104c666.css.map": "/PersonalPortfolio/static/css/main.4104c666.css.map",
+    "main.f1d72102.js.map": "/PersonalPortfolio/static/js/main.f1d72102.js.map",
+    "488.15c117bb.chunk.js.map": "/PersonalPortfolio/static/js/488.15c117bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4104c666.css",
+    "static/js/main.f1d72102.js"
+  ]
+}
