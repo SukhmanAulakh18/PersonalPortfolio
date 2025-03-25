@@ -1,6 +1,6 @@
 {
   "name": "react-portfolio",
-  "homepage": "https://sukhmanaulakh.com",
+  "homepage": "https://SukhmanAulakh18.github.io/PersonalPortfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,6 +32,8 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "cross-env CI=false react-scripts build",
     "test": "react-scripts test",
@@ -70,6 +72,7 @@
     "cross-env": "^7.0.3",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-import": "^2.31.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.5.3"
   }
 }
